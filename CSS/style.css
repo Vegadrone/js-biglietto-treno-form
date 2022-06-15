@@ -1,14 +1,31 @@
+/* GENERIC */
+:root {
+    --main-color:#b91450;
+    --second-color:#fff;
+    --inner-btn:#cccccc;
+    --passenger-color:#808080;
+}
+
 body {
-    background-color: lightgoldenrodyellow;
+    background-color: var(--main-color);
     font-family: sans-serif;
 }
 
+/*COMMONS */
+
 .generic-btn {
-    color: white;
-    background-color: rgb(167, 9, 9);
-    padding: 10px 20px;
-    border-radius: 50px;
+    color: var(--main-color);
+    background-color: var(--inner-btn);
+    padding: 5px 10px;
     text-decoration: none;
     font-size: 1.5rem;
-   
+    border: 3px solid transparent; 
 }
+
+.card-bg {
+    background-color: var(--second-color);
+}
+/* INPUT CARD */
+
+
+/* TICKET CARD */

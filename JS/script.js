@@ -21,26 +21,23 @@
 
 let kmPrice = 0.26;
 const sendBtn = document.querySelector('#send-btn');
-const finalPrice = document.querySelector('div pre');
+const finalPrice = document.querySelector('#price');
 const message = 'Il prezzo del tuo biglietto è:'
 
 sendBtn.addEventListener ('click', function(){
+    const userName = document.getElementById('user-name').value;
     const userKm = parseInt(document.getElementById ('user-km').value);
     const userAge = parseInt(document.getElementById ('user-age').value);
     let basePrice = userKm * kmPrice;
-    let under18 = ((basePrice * 85) / 100);
-    let over65 = ((basePrice * 65) / 100);
-    // console.log(userKm, userAge, basePrice)
+    let totalPrice = basePrice;
+    console.log(userName)
 
     if (userAge < 18) {
-        finalPrice.innerHTML = message + " " + under18.toFixed(2) + "€";
+        totalPrice = ((basePrice * 85) / 100);   
     } else if (userAge >= 65) {
-        finalPrice.innerHTML = message + " " + over65.toFixed(2) + "€";
-    } else (
-        finalPrice.innerHTML = message + " " + basePrice.toFixed(2) + "€"
-    )
-    // console.log (under18, over65, basePrice);
-        
+        totalPrice = ((basePrice * 65) / 100);  
+    }
+    finalPrice.innerHTML = message + " " + totalPrice.toFixed(2) + "€";
 })
 
 
