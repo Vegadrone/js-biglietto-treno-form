@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
 }
 
-.send-btn {
+.generic-btn {
     color: white;
     background-color: rgb(167, 9, 9);
     padding: 10px 20px;

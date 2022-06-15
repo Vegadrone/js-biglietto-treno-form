@@ -8,7 +8,7 @@
                 document.getElementById (user-km).value
                 document.getElementById (user-age).value
             })
-    moltiplicare per 0.26 (kmPrice) per ottenere il prezzo del biglietto base (baseTicketPrice)
+    moltiplicare per 0.26 (kmPrice) userKm per ottenere il prezzo del biglietto base (baseTicketPrice)
         se l'età è < (minore) 18 allora applica il 15% di sconto a baseTicketPrice
         altrimenti, se l'età è >= (maggiore uguale) 65 allora applica il 35% a baseTicketPrice
         altrimenti mostra solo ticketPrice.
@@ -18,5 +18,17 @@
 
     usare .toFixed (2) per mostrare solo due cifre decimali.
 */
+
+const kmPrice = 0.26;
+const sendBtn = document.querySelector('#send-btn');
+const finalPrice = document.querySelector('div pre');
+
+sendBtn.addEventListener ('click', function(){
+    const userKm = parseInt(document.getElementById ('user-km').value);
+    const userAge = parseInt(document.getElementById ('user-age').value);
+    console.log(userKm, userAge)
+})
+
+
 
 
