@@ -19,14 +19,24 @@
     usare .toFixed (2) per mostrare solo due cifre decimali.
 */
 
-const kmPrice = 0.26;
+let kmPrice = 0.26;
 const sendBtn = document.querySelector('#send-btn');
 const finalPrice = document.querySelector('div pre');
 
 sendBtn.addEventListener ('click', function(){
     const userKm = parseInt(document.getElementById ('user-km').value);
     const userAge = parseInt(document.getElementById ('user-age').value);
-    console.log(userKm, userAge)
+    let basePrice = userKm * kmPrice;
+    console.log(userKm, userAge, basePrice)
+
+    if (userAge < 18) {
+       ((basePrice * 85) / 100);
+    } else if (userAge >= 65) {
+         ((basePrice * 65) / 100)
+    } else (
+        basePrice
+    )
+    console.log (under18, over65, basePrice)
 })
 
 
