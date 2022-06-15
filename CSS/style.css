@@ -48,3 +48,8 @@ body {
 
 
 /* TICKET CARD */
+
+.box-name-ticket {
+    background-color: var(--passenger-color);
+    height: 150px;
+}

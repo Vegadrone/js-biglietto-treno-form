@@ -37,7 +37,8 @@ sendBtn.addEventListener ('click', function(){
     } else if (userAge >= 65) {
         totalPrice = ((basePrice * 65) / 100);  
     }
-    finalPrice.innerHTML = message + " " + totalPrice.toFixed(2) + "€";
+    finalPrice.innerHTML = /*message + " " + */totalPrice.toFixed(2) + "€";
+    document.getElementById ('show-name').innerHTML = userName;
 })
 
 

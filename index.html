@@ -40,17 +40,31 @@
         <h1 class="text-light text-center fw-bolder mb-4">IL TUO BIGLIETTO</h1>
         <div class="container">
             <div id="ticket-card" class="row rounded-4 p-3 card-bg">
-                <div class="col-4 flex-column">
-                    <pre id="price"></pre>
-                    <pre id="show-name"></pre>
+                <h4 class="fw-bold">DETTAGLI PASSEGGERO</h4>
+                <div class="col-4 flex-column box-name-ticket border-top border-bottom border-start border-dark">
+                    <h5 class="fw-bold px-3 pt-2">NOME PASSEGGERO</h5>
+                    <pre class="fs-5 px-3 fw-bold" id="show-name"></pre>
                 </div>
-                <div class="col-4 flex-column">
-        
+                <div class="col-8 flex-column border-top border-bottom border-dark">
+                    <div class="row">
+                        <div class="col-3">
+                            <h6 class="fw-bold">Offerta</h6>
+                            <pre class="fs-5 mt-5">5</pre>
+                        </div>
+                        <div class="col-3">
+                            <h6 class="fw-bold">Carrozza</h6>
+                            <pre class="fs-5 mt-5">5</pre>
+                        </div>
+                        <div class="col-3">
+                            <h6 class="fw-bold">Codice CP</h6>
+                            <pre class="fs-5 mt-5">5</pre>
+                        </div>
+                        <div class="col-3">
+                            <h6 class="fw-bold">Costo Biglietto</h6>
+                            <pre class="fs-5 mt-5" id="price"></pre>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4 flex-column">
-        
-                </div>
-        
             </div>
         </div>
     </div>
@@ -58,3 +72,7 @@
    <script src="./JS/script.js"></script> 
 </body>
 </html> 
+
+
+<!-- <pre id="price"></pre>
+    <pre id="show-name"></pre> -->
