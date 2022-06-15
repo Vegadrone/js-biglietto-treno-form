@@ -13,40 +13,45 @@
 </head>
 <body>
    <main>
-    <h1 class="text-light text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    <div class="container">
-        <div id="input-card" class="row rounded-4 p-3 card-bg">
-            <div class="col-4">
-                <span class="text-center d-block" id="user-name">Nome e Cognome</span>
-                <input type="text" placeholder="Inserisci Nome e Cognome">
-            </div>
-            <div class="col-4">
-                <span class="text-center d-block">Km da percorrere</span>
-                <input type="text" id="user-km" placeholder="Inserisci i KM da percorrere">
-            </div>
-            <div class="col-4">
-                <span class="text-center d-block">Età del passeggero</span>
-                <input class="text-center" type="text" id="user-age" placeholder="Inserisci la tua età">            
-            </div>
-             <div class="col-4 offset-4 text-center">
-                <a href="#" class="generic-btn" id="clear-btn">Annulla</a>
-                <a href="#" class="generic-btn" id="send-btn">Invia</a>
+    <div id="input-wrapper"  class="mt-5">
+        <h1 class="text-light text-center fw-bolder mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="container">
+            <div id="input-card" class="row rounded-4 p-3 card-bg">
+                <div class="col-4 p-2 d-flex flex-column align-items-center mt-3">
+                    <span class="text-center d-block main-txt-clr mb-2" id="user-name">Nome e Cognome</span>
+                    <input class="ms_input-box" type="text" placeholder="Inserisci Nome e Cognome">
+                </div>
+                <div class="col-4 p-2 d-flex flex-column align-items-center mt-3">
+                    <span class="text-center d-block main-txt-clr mb-2">Km da percorrere</span>
+                    <input class="ms_input-box" type="text" id="user-km" placeholder="Inserisci i KM da percorrere">
+                </div>
+                <div class="col-4 p-2 d-flex flex-column align-items-center mt-3">
+                    <span class="text-center d-block main-txt-clr mb-2">Età del passeggero</span>
+                    <input class="ms_input-box" type="text" id="user-age" placeholder="Inserisci la tua età">
+                </div>
+                <div class="col-4 offset-4 text-center p-4 mt-5">
+                    <a href="#" class="generic-btn mx-2" id="clear-btn">Annulla</a>
+                    <a href="#" class="generic-btn mx-2" id="send-btn">Invia</a>
+                </div>
             </div>
         </div>
     </div>
-    <h1 class="text-light text-center">IL TUO BIGLIETTO</h1>
-    <div class="container">
-        <div id="ticket-card" class="row rounded-4 p-3 card-bg">
-            <div class="col-4 flex-column">
-                <pre id="price"></pre>
+    <div id="output-wrapper" class="mt-5">
+        <h1 class="text-light text-center fw-bolder mb-4">IL TUO BIGLIETTO</h1>
+        <div class="container">
+            <div id="ticket-card" class="row rounded-4 p-3 card-bg">
+                <div class="col-4 flex-column">
+                    <pre id="price"></pre>
+                    <pre id="show-name"></pre>
+                </div>
+                <div class="col-4 flex-column">
+        
+                </div>
+                <div class="col-4 flex-column">
+        
+                </div>
+        
             </div>
-            <div class="col-4 flex-column">
-                
-            </div>
-            <div class="col-4 flex-column">
-               
-            </div>
-            
         </div>
     </div>
    </main>
