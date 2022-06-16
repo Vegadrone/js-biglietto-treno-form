@@ -29,25 +29,25 @@ sendBtn.addEventListener ('click', function(){
     const userName = document.getElementById('user-name').value;
     const userKm = parseInt(document.getElementById ('user-km').value);
     const userAge = parseInt(document.getElementById ('user-age').value);
-    let baseRate = "Tariffa Base"
     let basePrice = userKm * kmPrice;
     let totalPrice = basePrice;
-    let showRate = baseRate;
+    let message = "Tariffa Base";
+    
     
     if (userAge < 18) {
         totalPrice = ((basePrice * 85) / 100);
-        baseRate = "Tariffa Under18";
-        console.log (baseRate)
+        message = "Tariffa Under18";
+
    
      
     } else if (userAge >= 65) {
         totalPrice = ((basePrice * 65) / 100);
-        baseRate = "Tariffa Over65";
-        console.log(baseRate)
+        message = "Tariffa Over65";
+     
     } 
 
     document.getElementById ('show-name').innerHTML = userName;
-    document.getElementById ('rate').innerHTML = showRate ;
+    document.getElementById ('rate').innerHTML = message;
     document.getElementById ('train-carriage').innerHTML = Math.floor(Math.random() *10 + 1);
     document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 90000 + 9999);
     finalPrice.innerHTML = /*message + " " + */totalPrice.toFixed(2) + "€";
