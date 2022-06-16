@@ -21,6 +21,7 @@
 
 let kmPrice = 0.26;
 const sendBtn = document.querySelector('#send-btn');
+const clearBtn = document.querySelector('#clear-btn');
 const finalPrice = document.querySelector('#price');
 // const message = 'Il prezzo del tuo biglietto è:'
 
@@ -28,24 +29,35 @@ sendBtn.addEventListener ('click', function(){
     const userName = document.getElementById('user-name').value;
     const userKm = parseInt(document.getElementById ('user-km').value);
     const userAge = parseInt(document.getElementById ('user-age').value);
+    let baseRate = "Tariffa Base"
     let basePrice = userKm * kmPrice;
     let totalPrice = basePrice;
+    let showRate = baseRate;
     
     if (userAge < 18) {
         totalPrice = ((basePrice * 85) / 100);
+        baseRate = "Tariffa Under18";
+        console.log (baseRate)
+   
      
     } else if (userAge >= 65) {
-        totalPrice = ((basePrice * 65) / 100); 
+        totalPrice = ((basePrice * 65) / 100);
+        baseRate = "Tariffa Over65";
+        console.log(baseRate)
     } 
 
-
-    
     document.getElementById ('show-name').innerHTML = userName;
-    // document.getElementById ('rate').innerHTML = tare; 
+    document.getElementById ('rate').innerHTML = showRate ;
     document.getElementById ('train-carriage').innerHTML = Math.floor(Math.random() *10 + 1);
-    document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 99999 + 11111);
+    document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 90000 + 9999);
     finalPrice.innerHTML = /*message + " " + */totalPrice.toFixed(2) + "€";
     
+})
+
+clearBtn.addEventListener ('click', function(){
+    document.getElementById('user-name').value = "";
+    document.getElementById('user-km').value = "";
+    document.getElementById('user-age').value = "";
 })
 
 
