@@ -25,26 +25,27 @@ const finalPrice = document.querySelector('#price');
 // const message = 'Il prezzo del tuo biglietto è:'
 
 sendBtn.addEventListener ('click', function(){
-    const userName = document.getElementById('show-name').value;
+    const userName = document.getElementById('user-name').value;
     const userKm = parseInt(document.getElementById ('user-km').value);
     const userAge = parseInt(document.getElementById ('user-age').value);
     let basePrice = userKm * kmPrice;
     let totalPrice = basePrice;
-    let tare = "Tariffa Base"
-    console.log(userName)
-
+    
     if (userAge < 18) {
         totalPrice = ((basePrice * 85) / 100);
-        let tare = "Tariffa Under18"
+     
     } else if (userAge >= 65) {
-        totalPrice = ((basePrice * 65) / 100);
-        let tare = "Tariffa Over65"  
-    }
-    finalPrice.innerHTML = /*message + " " + */totalPrice.toFixed(2) + "€";
+        totalPrice = ((basePrice * 65) / 100); 
+    } 
+
+
+    
     document.getElementById ('show-name').innerHTML = userName;
-    document.getElementById ('rate').innerHTML = tare;
-    document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 9999 + 1);
+    // document.getElementById ('rate').innerHTML = tare; 
     document.getElementById ('train-carriage').innerHTML = Math.floor(Math.random() *10 + 1);
+    document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 99999 + 11111);
+    finalPrice.innerHTML = /*message + " " + */totalPrice.toFixed(2) + "€";
+    
 })
 
 
